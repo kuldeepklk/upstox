@@ -11,9 +11,7 @@ require("highcharts/indicators/pivot-points")(Highcharts);
 require("highcharts/indicators/macd")(Highcharts);
 require("highcharts/modules/exporting")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
-
 const ENDPOINT = "http://kaboom.rksv.net/watch";
-
 class App extends React.Component {
   state = {
     hdata: [],
