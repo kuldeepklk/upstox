@@ -12,7 +12,7 @@ require("highcharts/indicators/macd")(Highcharts);
 require("highcharts/modules/exporting")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
 
-const ENDPOINT = "https://kaboom.rksv.net/watch";
+const ENDPOINT = "http://kaboom.rksv.net/watch";
 
 class App extends React.Component {
   state = {
@@ -29,7 +29,7 @@ class App extends React.Component {
       this.setState({ ldata: ldata, lvolume: lvolume });
     }
     await axios
-      .get("https://kaboom.rksv.net/api/historical?interval=9")
+      .get("http://kaboom.rksv.net/api/historical?interval=9")
       .then((res) => {
         const hdata = res.data.sort();
         var ohlc = [];
